@@ -1,0 +1,65 @@
+header {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+#phone{
+    display:block;
+}
+
+
+#properties {
+    section{
+    grid-template-areas:
+    "photo name"
+    "photo address"
+    "photo phone";
+    }
+    img {
+        width: 450px;
+        height: 350px;
+    }
+} // end properties parent
+
+#hamburgerNav {
+    width: 250px;
+    &.open {
+        display: block;
+        height: 290px;
+    }
+}
+
+.hero{
+    div{
+      position: absolute;
+      height: 100%;
+      top: 10px;
+      left: 10px;
+  
+      .hero-text-block {
+        width: 135px;
+        height: 80%;
+        border-radius: 8px;
+        padding: 10px;
+      }
+      .hero-design-marker {
+        top: calc(80% + 8px);
+        left: 20px;
+        width: 115px;
+      }
+    }
+  }
+
+#about-help {
+    grid-template-columns: 1fr 1fr;
+    div {
+      justify-self: center;
+    }
+}
+// create the for loop
+@for $i from 1 through 12{
+    $w: calc($i /12) *100%;
+    .medium-#{$i} {flex-basis: $w}
+    }
+    

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fifth Floor Designs</title>
+    <meta name="description" content="Jade Xa | Start File with SCSS">
+    <meta name="author" content="Jade Xa">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+
+    
+<!-- fav icon stuff -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+
+
+</head>
+<body>
+    <div id="pageWrapper">
+        <div class="content">
+            <div id="headerWrapper">
+                <header>
+                    <div>
+                        <figure class="logo">
+                            <img src="images/logo-1x.webp" alt="header-logo" width="50" height="50"
+                            srcset="images/logo-1x.webp 1x, images/logo-1x.webp 2x, images/logo-1x.webp 3x">
+                        </figure>
+                        <h1>Fifth Floor Designs</h1>
+                    </div>
+                    <button id="hamburgerButton" class="open">&#9776;</button>
+                    <button id="closeButton" class="open">X</button>
+                </header>
+            </div>
+            
+            <nav id="hamburgerNav">
+                <ul>
+                    <li><a href="#">Clients</a></li>
+                    <li class="active"><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <nav id="desktopNav">
+                <ul>
+                    <li><a href="#">Clients</a></li>
+                    <li class="active"><a href="#" >About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div id="mainWrapper">
+                <main>
+                    <h1>About You</h1>
+                    <h2>We Help Show Your Best Stuff!</h2>
+                    <div class="hero">
+                        <video autoplay muted playsinline loop width="800" height="250">
+                            <source src="media/herovideo.mp4" type="video/mp4">
+                        </video>
+                        <div>
+                            <div class="hero-text-block">
+                                <h3>Your award winning website design and branding partner.</h3>
+                            </div>
+                            <div class="hero-design-marker">                             
+                            </div>
+                        </div>
+                    </div>
+                    <h3>How We Can Help</h3>
+                    <div id="about-help">
+                        <div>
+                            <span>Design</span>
+                            <img src="images/help-design.webp" alt="design">
+                            <ul>
+                                <li>Website Design</li>
+                                <li>UI/UX Design</li>
+                                <li>Mobile App Design</li>
+                                <li>Animation</li>
+                                <li>Graphic & Illustration</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span>Branding</span>
+                            <img src="images/help-branding.webp" alt="branding">
+                            <ul>
+                                <li>Visual Identity</li>
+                                <li>Brand Strategy</li>
+                                <li>Logo Design</li>
+                                <li>Iconography</li>
+                                <li>Packaging Design</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span>Development</span>
+                            <img src="images/help-development.webp" alt="development">
+                            <ul>
+                                <li>AWS Development</li>
+                                <li>Digital Ocean Development</li>
+                                <li>Custom PHP Development</li>
+                                <li>Application Development</li>
+                                <li>Github and Netlify</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span>Marketing</span>
+                            <img src="images/help-marketing.webp" alt="marketing">
+                            <ul>
+                                <li>Marketing</li>
+                                <li>Digital Strategy</li>
+                                <li>Marketing Strategy</li>
+                                <li>SEO Strategy</li>
+                                <li>Google Hacking</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="about-trust">
+                        <h3>Clients who trust us</h3>
+                        <section>
+                            <img src="images/client-A.webp" alt="development">
+                            <img src="images/client-B.webp" alt="development">
+                            <img src="images/client-C.webp" alt="development">
+                            <img src="images/client-D.webp" alt="development">
+                            <img src="images/client-E.webp" alt="development">
+                            <img src="images/client-F.webp" alt="development">
+                        </section>
+                    </div>
+                </main>
+            </div>
+
+            <div id="footerWrapper">
+                <div>
+                    <h1>1-800-555-1357</h1>
+                </div>
+                <div id="locations">
+                    <section>
+                        <h2>Fifth Floor Designs</h2>
+                        <p>900 Specturm West Dr<br>
+                        Suite 903<br>
+                        Irvine, CA 92681
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Fifth Floor Designs</h2>
+                        <p>29 East Infinity Loop<br>
+                        Suite 100<br>
+                        Albany, NY 42158
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Fifth Floor Designs</h2>
+                        <p>9865 Westminister St<br>
+                        Suite 4<br>
+                        Houston, TX 54545
+                        </p>
+                    </section>
+                </div>
+                <footer>
+                    <p>&copy; <span id="year">x</span> &bull; Jade Xa</p>
+                </footer>
+            </div>
+            <script src="js/scripts.js"></script>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,330 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: $defaultFont;
+  font-weight: $normalWeight;
+  color: $fontColor;
+}
+#pageWrapper{
+  position: relative;
+  overflow-x: hidden;
+}
+
+#headerWrapper {
+  color: $secondaryColor;
+}
+
+#hamburgerButton {
+  margin: 1rem 0;
+  font-weight: 600;
+  color: $fontColor;
+  display: none;
+  &.open {
+    display: block;
+  }
+}
+
+#closeButton {
+  margin: 1rem 0;
+  font-weight: 600;
+  color: $fontColor;
+  display: block;
+  &.open {
+    display: none;
+  }
+}
+#titleWrapper {
+  height: 100%;
+  width: 500px;
+  margin-top: 0;
+}
+
+
+#phone{
+  display:none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 2vw;
+  
+  div {
+    display: flex;
+    flex-basis: 95%;
+    align-items: end;
+    figure {
+      margin: 1rem .5rem;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 500;
+      color: $secondaryFontColor;
+    }
+  }
+
+  button{
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    align-self: start;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    text-align: right;
+    color: #444;
+  } //end button
+}
+
+/*Navigation stuff goes here*/
+#desktopNav {
+  display: none;
+}
+
+#hamburgerNav{
+  background: $menuColor;
+  width: 100%;
+  position: absolute;
+  z-index: 12;
+  top: 115px;
+  right: 0;
+  bottom:0;
+  display: none;
+  height: 0;
+  div{
+    display: block;
+    text-align: center;
+    background-color: #666;
+    color: #fff;
+  }//end div
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  ul li a{
+    display: block;
+    padding: 1.5rem .5rem;
+    text-align: right;
+    border-bottom: 2px rgb(233,233,233) solid;
+    text-decoration:  none;
+    font-size: 20px;
+    font-weight: 500;
+    color: $fontColor;
+  }// end anchors
+  ul li a:hover{
+    background-color: $secondaryColor;
+
+  }// end hover
+  li.active a{
+    color:$secondaryFontColor;
+  }
+  &.open {
+    display: block;
+    height: 290px;
+  }
+} //end nav
+
+main {
+  h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 500;
+    margin: 0;
+  }
+  h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: $secondaryFontColor 
+  }
+  h3 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+.hero{
+  position:relative;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+  video{
+    width: 100%;
+    height: auto;
+  }
+  div{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 10px;
+    right: 10px;
+    height: 100%;
+    .hero-text-block {
+      width: 120px;
+      height: 70%;
+      color: $fontColor;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 8px;
+      padding: 5px;
+      h3 {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+        color: $fontColor 
+      }
+    }
+    .hero-design-marker {
+      background-color: red;
+      top: calc(75%);
+      right: 35px;
+      width: 85px;
+      border-radius: 8px;
+      height: 5px;
+    }
+  }
+}
+
+#about-help {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  div {
+    margin: .75rem;
+    height: 400px;
+    width: 275px;
+    background-color: rgb(238,238,238);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    img {
+      width: 275px;
+    }
+    span {
+      display: block;
+      height: 50px;
+      background-color: rgb(178,63,97);
+      border-radius: 19px 19px 0 0;
+      font-size: 24px;
+      text-align: center;
+      color: white;
+      line-height: 60px;
+    }
+    ul li {
+      font-style: italic;
+      color: rgb(175,175,175)
+    }
+    ul li::marker {
+      color: $secondaryFontColor
+    }
+  }
+}
+
+#about-trust {
+  padding: 10px;
+  
+  section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    img {
+      padding: 1rem;
+      height: 60px;
+    }
+  }
+
+}
+//styling the rows
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 0;
+  padding: 0 8px;
+}
+
+
+//styling the columns
+.column{
+  padding: 0 8px;
+  margin: 8px 0;
+}
+
+// create the for loop
+@for $i from 1 through 12{
+$w: calc($i /12) *100%;
+.small-#{$i} {flex-basis: $w}
+}
+
+.round, .fill, .shadow{padding: 8px 8px;}
+.round{border-radius: 9px;}
+.fill{background-color: #ffaeeb;}
+.shadow{box-shadow: 0 0 10px #c0c0c0;}
+.left{justify-content: left;}
+.center{
+  margin: auto;
+  align-items: center;
+}
+
+// begin the footer
+
+#footerWrapper {
+    padding: 1rem;
+    background-color: $footerColor;
+    color:rgb(255, 255, 255);
+    h1 {
+      text-align: center;
+      margin: .5rem;
+      margin-top: 1rem;
+    }
+    div#locations {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+      color: rgb(131,131,131);
+      section {
+        margin: 1rem 0;
+        h2 {
+          margin: 0;
+          margin-left: .5rem;
+          font-weight: 300;
+        }
+        p {
+          margin: 0;
+          margin-left: 1rem;
+          font-size: 16px;
+          color: rgb(143,143,143);
+        }
+      }
+    }
+    footer {
+        border-top: 1px rgb(143,143,143) dotted;
+        padding: 2rem $gutter;
+        color: rgb(143,143,143);
+        p{
+            margin: 0;
+            font-weight: $lightWeight;
+            text-align: center;
+        }
+    }
+}

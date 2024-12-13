@@ -1,0 +1,87 @@
+header, nav, main, footer{
+    max-width: 75rem;
+    margin: auto;
+}
+
+/*Navigation stuff goes here*/
+#hamburgerButton {
+    display: none;
+    &.open {
+      display: none;
+    }
+  }
+  
+#closeButton {
+    display: none;
+    &.open {
+        display: none;
+    }
+}
+
+#hamburgerNav {
+  display: none;
+  &.open {
+    display: none;
+  }
+}
+
+#desktopNav {
+  display: block;
+  ul {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    gap: 25px;
+  }
+  ul li a{
+    text-align: right;
+    text-decoration:  none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #0d0c3f;
+  }
+  li.active a{
+    color:$secondaryFontColor;
+  }
+}
+.hero{
+  div{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 140px;
+
+    .hero-text-block {
+      height: 30%;
+      width: 94%;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 1rem;
+      top: calc(30% + 10px);
+    }
+    .hero-design-marker {
+      top: calc(60% + 23px);
+      left: 40px;
+      width: 75%;
+    }
+  }
+}
+
+header {
+    justify-content:left;
+}
+
+#about-help {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  div {
+    justify-self: center;
+  }
+}
+
+
+// create the for loop
+@for $i from 1 through 12{
+    $w: calc($i /12) *100%;
+    .large-#{$i} {flex-basis: $w}
+    }
+    
